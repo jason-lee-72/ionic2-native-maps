@@ -5,7 +5,9 @@ import {
   GoogleMapsEvent,
   LatLng
 } from '@ionic-native/google-maps';
- 
+
+import {GoogleMapsPage} from "../google-maps/google-maps";
+
 @Component({
   selector: 'home-page',
   templateUrl: 'home.html'
@@ -13,7 +15,8 @@ import {
 export class HomePage {
  
     map: GoogleMap;
- 
+    googleMapsPage = GoogleMapsPage;
+
     constructor(public navCtrl: NavController, public platform: Platform) {
         platform.ready().then(() => {
             this.loadMap();
